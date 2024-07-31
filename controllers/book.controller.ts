@@ -81,7 +81,10 @@ export const getBooksByAuthorId = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const books = await knex('books').where({ author_id: id });
-    res.json(books);
+    if (!books) {
+      return res.status(404).json({ error: "books not found" });
+    }
+    res.status(200).json(books);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch books by author' });
   }
