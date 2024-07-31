@@ -9,6 +9,6 @@ router.get('/:id', getBookById);
 router.post('/', createBook);
 router.put('/:id', updateBook);
 router.delete('/:id', deleteBook);
-router.get("/books/author/:id", getBooksByAuthorId);
+router.get("/author/:id", getBooksByAuthorId);
 
 export default router;
