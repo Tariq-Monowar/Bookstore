@@ -39,15 +39,18 @@ export const createBook = async (req: Request, res: Response) => {
     res.status(500).json(error);
   }
 };
+
+
 export const updateBook = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { title, description, published_date, author_id } = req.body;
+    const format_date = new Date(published_date).toISOString().split("T")[0];
 
     const updated = await knex("books").where({ id }).update({
       title,
       description,
-      published_date,
+      published_date: format_date,
       author_id,
     });
 
@@ -89,3 +92,4 @@ export const getBooksByAuthorId = async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to fetch books by author' });
   }
 };
+
