@@ -59,12 +59,12 @@ For API testing and collaboration, you can access the Postman collection [here](
 
 3. Create a `.env` file in the root directory and add your environment variables:
     ```plaintext
-    DB_CLIENT=mysql2
     DB_HOST=localhost
     DB_USER=root
     DB_PASSWORD=password
     DB_NAME=bookstore
-    SERVER_PORT=3000
+    DB_PORT=3306
+    SERVER_PORT=1000
     ```
 
 4. Run migrations to set up the database schema:
