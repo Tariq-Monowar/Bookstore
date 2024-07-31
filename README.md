@@ -28,7 +28,7 @@ For API testing and collaboration, you can access the Postman collection [here](
 
 1. Clone the repository:
     ```bash
-    git clone <[repository-url](https://github.com/Tariq-Monowar/Bookstore/)>
+    git clone [repository-url]('https://github.com/Tariq-Monowar/Bookstore/')
     cd bookstore
     ```
 
